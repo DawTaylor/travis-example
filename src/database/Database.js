@@ -37,16 +37,17 @@ class DataBase {
   }
 
   deleteEntity(id, collection) {
-    this.db = R.pipe(
+    const updatedCollection = R.pipe(
       R.propOr([], collection),
-      R.reject(R.whereEq({ _id: id }))
+      R.reject(R.whereEq({ _id: id })),
     )(this.db)
 
+    this.db = R.assocPath([collection], updatedCollection, this.db)
     return true
   }
 
-  getEntities(query = null, collection) {
-    if(!query) return R.propOr([], collection)(this.db)
+  getEntities(query, collection) {
+    if(!query) return R.propOr([], collection, this.db)
     return R.pipe (
       R.propOr([], collection),
       R.filter(R.whereEq(query))
@@ -60,7 +61,15 @@ class DataBase {
 
 const db = new DataBase()
 
+class MockedDatabase extends DataBase {
+  constructor(data) {
+    super()
+    this.db = data
+  }
+}
+
 module.exports = {
   DataBase,
+  MockedDatabase,
   db,
 }
