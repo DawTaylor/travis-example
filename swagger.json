@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "Codenation Swagger Exampleeee",
+    "title": "Codenation Swagger & Travis Example",
     "description": "Yet Another Node.js Blogg Application API",
     "license": {
       "name": "MIT",
@@ -176,7 +176,9 @@
     },
     "Users": {
       "type": "array",
-      "$ref": "#/definitions/User"
+      "items": {
+        "$ref": "#/definitions/User"
+      }
     }
   }
 }
