@@ -24,7 +24,7 @@
   "dependencies": {
     "body-parser": "1.17.2",
     "express": "4.15.3",
-    "method-override": "2.3.9",
+    "method-override": "2.3.10",
     "mongoose": "4.11.5",
     "ramda": "^0.27.0",
     "swagger-ui-express": "2.0.6"
