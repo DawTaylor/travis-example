@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '12'
+install:
+- yarn install
+script:
+- yarn test
+deploy:
+  provider: heroku
+  app: codenation-example
+  api_key:
+    secure: FEzH+eRzKLbnIjdlQMPLIoGkmfsocH0FngFk+7WvwPJ1/0Uo+WnRtw06H5z5aS9r0yO/V6T0fang9PsNlYKP5xi/5qtXMB9C3wtKXM/Rc6liQLYc6egP+Sxp+TjAxnAstc88lxuR4KfkbURcDxpq+aPhr2rvhOpx8iEuqIyEXEsboo1KU2SzLO4YWka08C1V7Cf0JP8h031o/SjcsULRSSmkFZThUkIg3LigkiIr3xnxkW+Eqp9PqlkjYdJdI/W0dldZTIlZ0oBGgUcjPKnH01g0RoR4AxHPIOqWPLnZqR3JLdd4bF0zNATecolROUn4N4yESxmo3jqEt9TXRQwnFXKZAjkBHlPzQKUHAqOA84pmndFcx+453eUDZus5sv9L0cVixEQf454ClFFyQl2G1LKSUXIqLop+s/+liAku+ztnbrlXsj9+SnpIEPKg4PFsqYTAxvyEAz+sHncZ//am2+UCZ3vKsX3UAH8muuV2S0J/hTvnYMDPnnOLjg6jtmZWHc+G/oc6/X4Eq92EBd7/EXV26UmLIMuj7ACbm+ok2dSv20lYrB+XDHcE7SgJ2diLkkCUFq9EwoKtXPWlmdeBnV+fTBK3bIeZwIuKNdninEHggIA4cZZ6Q6u8nwbqsma4pw+dFoy0Jb2JD1DUYD3Xt3X3D1kwv6rz72Ac3N6AP4o=
+  on:
+    branch: master
