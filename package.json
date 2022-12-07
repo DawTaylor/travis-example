@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "body-parser": "1.17.2",
-    "express": "4.15.3",
+    "express": "4.17.3",
     "method-override": "2.3.10",
     "mongoose": "5.7.5",
     "ramda": "^0.27.0",
